@@ -1,0 +1,202 @@
+@media screen and (max-width: 1640px) {
+ .main-content__video video {
+    height: 1000px!important;
+}
+}
+@media screen and (max-width: 1440px) {
+    .main-content__video video {
+        width: 120%!important;
+    }
+}
+@media screen and (max-width: 1166px) {
+ .media-part {
+    width: 48%;
+}
+.main-content__video video {
+    width: 150%!important;
+}
+}
+
+@media screen and (max-width: 1024px) {
+    .main-content__products {
+        background-size: 250%;
+    }
+
+    .main-content__video video {
+        width: 190%!important;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .header__menu{
+        min-width: 0;
+        width: calc(100% - 149px);
+    }
+    .video-banner__content{
+        min-width: 0;
+        width: 75%;
+    }
+    #trigger {
+        display: block;
+    }
+    .menu-filter {
+        width: calc(100% - 559px);
+    }
+
+    .menu {
+        font-size: 1.6em;
+        width: 500px;
+    }
+    .media-part {
+        width: 75%;
+        margin: 5% 0;
+    }
+    .main-content__media {
+       text-align: center;
+   }
+   .contacts__elem h4{
+    font-size: 1em;
+   }
+   .header__menu > .se-data-btn{
+    display: none;
+}
+.h-menu-icon{
+    padding: 10px!important;
+}
+.h-menu-devices{
+    display:inline-block!important;
+}
+.header__logo{
+    padding: 7px;
+    width: 135px;
+}
+.h-menu-icon ul{
+    right: 0;
+    left: inherit;
+    text-align: right;
+    padding: 15px 0 0 0;
+}
+.main-content__video video {
+    display: none;
+}
+.w-video{
+    background-image: url('../content/softelegancedata-background.jpg');
+    background-size: 300%;
+    background-position: 50% 50%;
+}
+.products-content__btn label, .products-content__btn a, #cancelForm{
+    margin: 5px 0;
+}
+.case-studies-content__text, .w-history{
+    padding: 0 1%;
+}
+.main-content__products{
+    background-size: 350%;
+}
+.main-content__history h3{
+font-size: 50px;    
+}
+}
+
+@media screen and (max-width: 462px) {
+    .w-video{
+        background-size: 350%;
+    }
+
+}
+@media screen and (max-width: 425px) {
+    .footer__socials ul li a{
+        padding: 0;
+    }
+.footer__socials ul li{
+    width: 16%;
+}
+    .main-content__footer{
+        padding: 1.5% 3%;
+    }
+    .products-content__btn label, .products-content__btn a {
+        width: 90%;
+        margin: 3% 0;
+    }
+    .h-menu-icon ul li{
+        font-size: 18px;
+    }
+    .contacts__elem{
+        width: 98%;
+        margin: 15px 0;
+    }
+    .contacts-elem-content{
+        background: rgba(0,0,0,0.7);
+    }
+    .contacts-elem-content > h4, .contacts-elem-content> div, .contacts-elem-content> div > a{
+        color: #fff;
+    }
+
+    .media-part {
+        width: 98%;
+    }
+    .contacts-elem-content > div{
+        font-size: 25px;
+    }
+    .mobile-bg {
+        display: block;
+        width: 400%;
+        margin-left: -165%;
+    }
+.video-banner{
+    top: 18vh;
+}
+    .video-banner__content {
+        width: 80%;
+    }
+
+    .video-btn {
+        width: 100%;
+    }
+
+    .history-img, .case-studies-img {
+        display: none;
+    }
+
+    .history-content, .products-content, .case-studies-content {
+        margin-right: 0;
+        margin-left: 0;
+        width: 94%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .main-content__products {
+        background-size: 450%;
+        background-position: 0% 60%;
+    }
+
+
+
+    .menu-contacts {
+        bottom: 50px;
+    }
+
+    .social-list-elem {
+        margin: 0 10px;
+    }
+
+    .menu-filter__close i {
+        font-size: 2em;
+    }
+    .case-studies-content__btn a{
+font-size: 1.5em;
+    }
+    .case-studies-content h3{
+        font-size: 4em;
+    }
+
+}
+@media screen and (max-width: 370px) {
+
+    .main-content__products {
+        background-size: 700%;
+    }
+}

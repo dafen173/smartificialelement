@@ -1,0 +1,393 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+body.index{
+    line-height: 1;
+}
+
+/*=========layout styles*/
+.layout {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    /*grid-template-rows: 100px 1fr 1fr;*/
+    gap: 0 5px;
+    grid-template-areas:
+            "top top top top top top top top top top top top"
+            "f_icon f_icon f_icon f_icon animation animation animation animation s_icon s_icon s_icon s_icon"
+            "credentials credentials credentials text text text text text text buttons buttons buttons";
+}
+.top {
+    padding: 2vh 2vh 0 2vh;
+    grid-area: top;
+}
+.text {
+    grid-area: text;
+}
+.buttons {
+    grid-area: buttons;
+}
+.credentials {
+    grid-area: credentials;
+}
+.f_icon {
+    grid-area: f_icon;
+}
+.s_icon {
+    grid-area: s_icon;
+}
+.animation {
+    grid-area: animation;
+}
+
+/*=========top logo*/
+.se-logo img {
+    width: 200px;
+}
+
+/*===========circle styles*/
+.header {
+    position: absolute;
+    top: calc(50% - 37px);
+    left: calc(50% - 175px);
+    width: 350px;
+    color: #fff;
+    letter-spacing: 5px;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.circle {
+    z-index: 999;
+    position: relative;
+    background: url(/assets/images/industrial-ai-a-gnostics.png) no-repeat;
+    background-size: 100%;
+    background-position: 30% 75%;
+    border-radius: 50%;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: visible;
+}
+
+.circle:before,
+.circle:after {
+    content: "";
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+}
+
+.circle:before {
+    box-shadow: inset 0 25px 0 rgba(242, 242, 242, 0.6), inset 25px 0 0 rgba(178, 178, 178, 0.6), inset 0 -25px 0 rgba(103, 103, 103, 0.6), inset -25px 0 0 rgba(55, 55, 55, 0.6);
+    animation: counterclockwise 7.5s -2.5s linear infinite;
+}
+.circle:after {
+    box-shadow: inset 0 25px 0 rgba(255, 92, 0, 0.74), inset 25px 0 0 rgba(244, 118, 47, 0.6), inset 0 -25px 0 rgba(247, 147, 90, 0.6), inset -25px 0 0 rgba(255, 184, 143, 0.6);
+    animation: clockwise 7.5s -2.5s linear infinite;
+}
+
+@keyframes clockwise {
+    0% {
+        transform: rotateZ(0deg) scaleX(1.05) scaleY(1.05);
+    }
+    50% {
+        transform: rotateZ(180deg) scaleX(1.1) scaleY(1.1);
+    }
+    100% {
+        transform: rotateZ(360deg) scaleX(1.05) scaleY(1.05);
+    }
+}
+@keyframes counterclockwise {
+    0% {
+        transform: rotateZ(0deg) scaleX(1.05) scaleY(1.05);
+    }
+    50% {
+        transform: rotateZ(-180deg) scaleX(1.1) scaleY(1.1);
+    }
+    100% {
+        transform: rotateZ(-360deg) scaleX(1.05) scaleY(1.05);
+    }
+}
+
+/*============== icons part*/
+#firstIcon,
+#secondIcon {
+    height: 150px;
+    position: relative;
+    margin-top: calc(50% - 75px);
+}
+#firstIcon {
+    text-align: right
+}
+#secondIcon {
+    text-align: left
+}
+#firstIcon img {
+    height: 100%;
+    opacity: 0;
+    margin-right: -200px;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    transition: all 2s ease;
+}
+#secondIcon img {
+    height: 100%;
+    opacity: 0;
+    margin-left: -50px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.firstVisibleIcon img {
+    opacity: 1 !important;
+    margin-right: 0 !important;
+}
+.secondVisibleIcon img {
+    opacity: 1 !important;
+    margin-left: 0 !important;
+}
+
+.button{
+    margin: 10px 0;
+}
+.button:last-child{
+    margin-bottom: 0;
+}
+.button a {
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 30px 10px 30px;
+    font-weight: 300;
+    transition: 0.3s ease-in;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right, #fe8c00 0%, #ff5c00 51%, #fe8c00 100%);
+    color: #fff;
+    text-decoration: none;
+}
+.button a:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.credentials{
+    font-size: 0.8em;
+    bottom: 40px;
+    left: 10px;
+    color: #111111;
+    min-height: 1.6em;
+}
+.credentials .credentials_inner_wrapper{
+    position: relative;
+    height: 100%;
+}
+.credentials .credentials_bottom_content{
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+}
+.credentials a{
+    color: #111111;
+}
+
+.description{
+    text-align: center;
+}
+.description>div{
+    text-align: justify;
+    padding-top: 25px;
+}
+
+.flex_wrapper{
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
+    padding-bottom: 2vh;
+    height: 100%;
+}
+.buttons{
+    z-index: 1;
+}
+.buttons .flex_wrapper{
+    justify-content: right;
+    padding-right: 2vh;
+}
+@media screen and (min-width: 1601px) {
+    .description>div{
+        max-width: 70%;
+    }
+}
+@media screen and (min-width: 1281px) and (max-width: 1400px) {
+    .description>div{
+        max-width: 100%;
+    }
+    .flex_wrapper {
+        padding-bottom: 20px;
+    }
+}
+/*layout change*/
+@media screen and (min-width: 1000px) and (max-width: 1280px) {
+    .layout {
+        /*grid-template-rows: 80px 1fr 1fr;*/
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "top top top top top top top top top top top"
+            "f_icon f_icon f_icon animation animation animation animation animation s_icon s_icon s_icon"
+            "credentials credentials credentials text text text text text buttons buttons buttons";
+    }
+    .circle {
+        width: 90%;
+        margin-left: 5%;
+        padding-bottom: 90%;
+    }
+    #firstIcon,
+    #secondIcon {
+        margin-top: calc(100% - 125px);
+    }
+    .middle{
+        font-size: 16px;
+    }
+    .button a {
+        padding: 10px 15px 10px 15px;
+        font-size: 16px;
+    }
+    .flex_wrapper{
+        padding-bottom: 2vh;
+    }
+}
+@media screen and (min-width: 741px) and (max-width: 1000px) {
+    .layout {
+        /*grid-template-rows: 80px 1fr 1fr;*/
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "top top top top top top top top top top top top"
+            "f_icon f_icon f_icon f_icon animation animation animation animation s_icon s_icon s_icon s_icon"
+            "credentials credentials credentials text text text text text text buttons buttons buttons";
+    }
+    #firstIcon,
+    #secondIcon {
+        height: 100px;
+        margin-top: calc(50% - 50px);
+    }
+    .middle{
+        font-size: 14px;
+    }
+    .button a {
+        padding: 10px 10px 10px 10px;
+        font-size: 14px;
+    }
+    .circle .header{
+        font-size: 1.2em;
+    }
+}
+/*mobile - horizontal layout*/
+@media screen and (min-width: 540px) and (max-width: 740px) {
+    .layout {
+        /*grid-template-rows: 65px 1fr 1fr;*/
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "top top top top top top top"
+            "f_icon f_icon animation animation animation s_icon s_icon"
+            "text text text text text text text"
+            "buttons buttons buttons buttons buttons buttons buttons"
+            "credentials credentials credentials credentials credentials credentials credentials";
+    }
+    .top {
+        padding: 2vh 2vh 4vh 2vh;
+        text-align: center;
+    }
+    #firstIcon,
+    #secondIcon {
+        height: 100px;
+        position: relative;
+        margin-top: calc(50% - 0px);
+    }
+    .middle{
+        font-size: 14px;
+    }
+    .button a {
+        font-size: 14px;
+    }
+    .description{
+        padding-top: 15px;
+    }
+    .description>div{
+        width: 80%;
+    }
+    .buttons .flex_wrapper {
+        justify-content: center;
+    }
+    .description>div{
+        padding: 0 2vh 0 2vh;
+    }
+    .circle .header{
+        font-size: 1.2em;
+    }
+    .circle:before {
+        box-shadow: inset 0 15px 0 rgba(242, 242, 242, 0.6), inset 15px 0 0 rgba(178, 178, 178, 0.6),
+        inset 0 -15px 0 rgba(103, 103, 103, 0.6), inset -15px 0 0 rgba(55, 55, 55, 0.6);
+        animation: counterclockwise 7.5s -2.5s linear infinite;
+    }
+    .circle:after {
+        box-shadow: inset 0 15px 0 rgba(255, 92, 0, 0.74), inset 15px 0 0 rgba(244, 118, 47, 0.6),
+        inset 0 -15px 0 rgba(247, 147, 90, 0.6), inset -15px 0 0 rgba(255, 184, 143, 0.6);
+        animation: clockwise 7.5s -2.5s linear infinite;
+    }
+}
+/*mobile - vertical layout*/
+@media screen and (max-width: 540px) and (min-height: 400px) {
+    .layout {
+        overflow-x: hidden;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "top top top top top top top top"
+            "f_icon animation animation animation animation animation animation s_icon"
+            "text text text text text text text text"
+            "buttons buttons buttons buttons buttons buttons buttons buttons"
+            "credentials credentials credentials credentials credentials credentials credentials credentials";
+    }
+    .top {
+        padding: 2vh 2vh 4vh 2vh;
+        text-align: center;
+    }
+    #firstIcon,
+    #secondIcon {
+        display: none;
+    }
+    .middle{
+        font-size: 12px;
+    }
+    .button a {
+        font-size: 14px;
+    }
+    .buttons .flex_wrapper {
+        justify-content: center;
+    }
+    .description>div{
+        max-width: 90%;
+    }
+    .circle .header{
+        font-size: 1em;
+        left: calc(50% - 125px);
+        width: 250px;
+    }
+    .circle:before {
+        box-shadow: inset 0 15px 0 rgba(242, 242, 242, 0.6), inset 15px 0 0 rgba(178, 178, 178, 0.6),
+        inset 0 -15px 0 rgba(103, 103, 103, 0.6), inset -15px 0 0 rgba(55, 55, 55, 0.6);
+        animation: counterclockwise 7.5s -2.5s linear infinite;
+    }
+    .circle:after {
+        box-shadow: inset 0 15px 0 rgba(255, 92, 0, 0.74), inset 15px 0 0 rgba(244, 118, 47, 0.6),
+        inset 0 -15px 0 rgba(247, 147, 90, 0.6), inset -15px 0 0 rgba(255, 184, 143, 0.6);
+        animation: clockwise 7.5s -2.5s linear infinite;
+    }
+}
