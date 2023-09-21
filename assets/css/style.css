@@ -871,7 +871,9 @@ body {
   display: none;
   background-color: black;
   opacity: 75%;
-  padding: 50px 20px 20px 20px;
+  /* padding: 50px 20px 20px 20px; */
+  padding-top: 30px;
+
   position: absolute;
   top: 60%;
 }
@@ -890,18 +892,41 @@ body {
   transition: 250ms;
 }
 
+
+/* .header__navbar__item__container_dropitems:hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+} */
+
+.appearing_section--padding_top {
+  padding-top: 100px;
+}
+
+.appearing_section--padding_top_xl {
+  padding-top: 150px;
+}
+
 @media screen and (min-width: 851px) {
 
   .header__navbar__item--dropdown:hover .header__navbar__item__submenu {
-      display: block;
+      /* display: block; */
       color: white;
       font-size: 0.85rem;
       cursor: pointer;
+
+      display: flex;
+      flex-direction: column;
   }
 
-  .header__navbar__item__submenu:hover {
-      display: block;
-      opacity: 100%;
+  .header__navbar__item__submenu__item {
+    padding: 10px 20px 10px 20px;
+    opacity: 80%;
+  }
+
+  .header__navbar__item__submenu__item:hover {
+    opacity: 100%;
   }
 
   .header__navbar__item--dropdown .header__navbar__item__arrow_down  {
@@ -922,6 +947,10 @@ body {
   .header__logo:hover {
       opacity: 100%;
   }
+
+  /* .header__navbar__item__submenu--active {
+    display: none;
+  } */
 }
 
 @media screen and (max-width: 850px) {
@@ -1008,9 +1037,13 @@ body {
 
   .header__navbar__item__submenu--active {
       transition: all .7s ease;
-      display: block;
+      /* display: block; */
       background-color: black;
       padding: 20px 20px 0px 20px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
   }
 
   .header__navbar__item--active {
@@ -1030,11 +1063,19 @@ body {
       fill: white;
       width: 16px;
   }
+
+
+  /* .appearing_section--padding_top {
+    padding-top: 100px;
+  } */
+
+  /* .appearing_section--padding_top_xl {
+    padding-top: 150px;
+  } */
 }
 
-/* =================================================================== */
 
-
+/* ====================== Nikandrov's styles end ========================= */
 
 
 
