@@ -60,8 +60,21 @@ document.addEventListener('click', function handleClickOutsideBox(event) {
 
 
 
+//======================= ADDING DATE TO THE TITLE =======================================
 
+function padTo2Digits(num) {
+    return num.toString().padStart(2, '0');
+}
 
+function formatDate(date) {
+    return [
+      padTo2Digits(date.getDate()),
+      padTo2Digits(date.getMonth() + 1),
+      date.getFullYear(),
+    ].join('/');
+}
 
+let todayDate = formatDate(new Date())
 
-
+const title = document.querySelector('.title')
+title.innerHTML = `Smartificial Element | Software Development Experience for Industries (Updated ${todayDate})`
