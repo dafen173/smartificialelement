@@ -890,18 +890,6 @@ body {
   transition: 250ms;
 }
 
-
-.download_app {
-  width: 150px;
-}
-
-.apps_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-
 @media screen and (min-width: 851px) {
 
   .header__navbar__item--dropdown:hover .header__navbar__item__submenu {
@@ -937,12 +925,6 @@ body {
 }
 
 @media screen and (max-width: 850px) {
-
-  /* body {
-    background-color: #2a2a2a;
-  } */
-
-
   .header__toggle_button,
   .toggle_button {
       display: flex;
@@ -1048,34 +1030,15 @@ body {
       fill: white;
       width: 16px;
   }
-
-  .apps_container {
-    margin-top: 10px;
-  }
-}
-
-@media (max-width: 850px) {
-  .footer .mobile_middle {
-    display: inline-block;
-    margin: 0 auto 15px;
-    float: none;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    margin-bottom: 270px;
-  }
-  .footer {
-    height: 270px;
-  }
 }
 
 /* =================================================================== */
 
 
 
-/* @media (max-width: 620px) {
+
+
+@media (max-width: 620px) {
   body {
     margin-bottom: 270px;
   }
@@ -1087,6 +1050,6 @@ body {
     margin: 0 auto 15px;
     float: none;
   }
-} */
+}
 
 /*# sourceMappingURL=style.css.map */
